@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ms-book
+  datasource:
+#    platform: postgres
+    url: ${URL_DATABASE:jdbc:postgresql://localhost:5432/library_db}
+    username: postgres
+    password: "{cipher}a2ab55eb46ffd775189a87e363f9bab97352c50bc6f47ca56feac3a64937ae"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+server:
+  port: 7000
+  
+key: ABCDabcd1234
+
